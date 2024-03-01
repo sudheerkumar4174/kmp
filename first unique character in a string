@@ -1,0 +1,25 @@
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        m=[0]*27
+        l=[]
+        f={}
+        for i in range(len(s)):
+            if s[i] not in l:
+                l.append(s[i])
+                f[s[i]]=i
+        for i in s:
+            d=ord(i)-97
+            m[d]=m[d]+1
+        sai=False
+        de=-1
+        for i in s:
+            g=ord(i)-97
+            if m[g]==1:
+                v=chr(g+97)
+                n=f.get(v)
+                sai=True
+                break
+        if sai:
+            return n
+        else:
+            return de
