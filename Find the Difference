@@ -1,0 +1,13 @@
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        l=[0]*27
+        m=[0]*27
+        for i in s:
+            f=ord(i)-97
+            l[f]=l[f]+1
+        for i in t:
+            f=ord(i)-97
+            m[f]=m[f]+1
+        for i in range(27):
+            if  m[i]>l[i]:
+                return chr(i+97)
