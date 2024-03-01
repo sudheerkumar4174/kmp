@@ -1,0 +1,18 @@
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        x=[0]*27
+        y=[0]*27
+        for i in ransomNote:
+            d=ord(i)-97
+            x[d]=x[d]+1
+        for i in magazine:
+            d=ord(i)-97
+            y[d]=y[d]+1
+        c=0
+        for i in ransomNote:
+            d=ord(i)-97
+            if y[d]>=x[d]:
+                c=c+1
+            else:
+                return False
+        return True
