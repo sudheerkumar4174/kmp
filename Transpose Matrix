@@ -1,0 +1,13 @@
+class Solution(object):
+    def transpose(self, matrix):
+        a=len(matrix)
+        b=len(matrix[0])
+        m=[]
+        for i in range(0,b):
+            g=[]
+            for j in range(0,a):
+                g.append(matrix[j][i])
+            m.append(g)
+        return m
+         
+        
