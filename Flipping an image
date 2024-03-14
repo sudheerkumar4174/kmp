@@ -1,0 +1,19 @@
+class Solution(object):
+    def flipAndInvertImage(self, image):
+        n=len(image)
+        m=[]
+        for i in range(0,n):
+            l1=[]
+            for j in range(n-1,-1,-1):
+                l1.append(image[i][j])
+            m.append(l1)
+        for i in range(0,n):
+            for j in range(0,n):
+                if m[i][j]==0:
+                    m[i][j]=1
+                else:
+                    m[i][j]=0
+        return m
+
+
+        
