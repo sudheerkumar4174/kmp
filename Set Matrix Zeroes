@@ -1,0 +1,23 @@
+class Solution(object):
+    def setZeroes(self, matrix):
+        m=len(matrix)
+        n=len(matrix[0])
+        l=[]
+        k=[]
+        for i in range(0,m):
+            for j in range(0,n):
+                if matrix[i][j]==0:
+                    l.append(i)
+                    k.append(j)
+        for i in range(0,m):
+            if i in l:
+                for j in range(0,n):
+                    matrix[i][j]=0
+        for i in range(0,n):
+            if i in k:
+                for j in range(0,m):
+                    matrix[j][i]=0
+        return matrix
+
+         
+        
