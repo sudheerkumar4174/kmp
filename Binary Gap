@@ -1,0 +1,20 @@
+class Solution(object):
+    def binaryGap(self, n):
+        x=bin(n)
+        y=x[2:]
+        l=[]
+        m=[]
+        ans=0
+        for i in y:
+            l.append(i)
+        for i in range(len(l)):
+            if l[i]=='1':
+                m.append(i)
+        for i in range(len(m)-1):
+            d=m[i+1]-m[i]
+            if ans<d:
+                ans=d
+        return ans
+         
+         
+        
