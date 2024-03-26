@@ -1,0 +1,19 @@
+class Solution(object):
+    def uncommonFromSentences(self, s1, s2):
+         d={}
+         e={}
+         l=[]
+         for i  in s1.split():
+            d[i]=d.get(i,0)+1
+         for i in s2.split():
+            e[i]=e.get(i,0)+1
+         for i in d:
+            if i not in e:
+                if d.get(i)<=1:
+                    l.append(i)
+         for i in e:
+            if i not in d and e.get(i)<=1:
+                if i not in l:
+                    l.append(i)
+         return l
+        
