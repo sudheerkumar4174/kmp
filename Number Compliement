@@ -1,0 +1,17 @@
+class Solution:
+    def findComplement(self, num: int) -> int:
+        x=bin(num)
+        z=x[2:]
+        flipped_binary = ''.join(['0' if bit == '1' else '1' for bit in z])
+        return int(flipped_binary,2)
+
+         
+
+
+
+        
+            
+
+            
+
+         
