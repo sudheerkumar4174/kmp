@@ -1,0 +1,19 @@
+class Solution(object):
+    def hammingDistance(self, x, y):
+        a=bin(x)[2:]
+        b=bin(y)[2:]
+        f=len(a)
+        g=len(b)
+        if f<g:
+            a=(g-f)*'0'+a
+        else:
+            b=(f-g)*'0'+b
+        c=0
+        i=0
+        while i<len(a):
+            if a[i]!=b[i]:
+                c=c+1
+            i=i+1
+        return c
+         
+        
