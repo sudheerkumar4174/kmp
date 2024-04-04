@@ -1,0 +1,18 @@
+class Solution(object):
+    def reverseOnlyLetters(self, s):
+        q=""
+        for i in s:
+            a=ord(i)
+            if (a>=65 and a<=90) or (a>=97 and a<=122):
+                q=q+i
+        k=len(q)-1
+        f=""
+        for i in range(len(s)):
+            a=ord(s[i])
+            if (a>=65 and a<=90) or (a>=97 and a<=122):
+                f=f+q[k]
+                k=k-1
+            else:
+                f=f+s[i]
+        return f
+                 
