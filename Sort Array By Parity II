@@ -1,0 +1,22 @@
+class Solution(object):
+    def sortArrayByParityII(self, nums):
+        a=[]
+        b=[]
+        for i in nums:
+            if i%2==0:
+                a.append(i)
+            else:
+                b.append(i)
+        h=[]
+        k=0
+        l=0
+        for i in range(0,len(nums)):
+            if i%2==0:
+                h.append(a[k])
+                k=k+1
+            else:
+                h.append(b[l])
+                l=l+1
+        return h
+         
+        
