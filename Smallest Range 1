@@ -1,0 +1,12 @@
+class Solution(object):
+    def smallestRangeI(self, nums, k):
+        ma=max(nums)
+        mi=min(nums)
+        m=ma-mi-2*k
+        if m<0:
+            return 0
+        return m
+        
+
+      
+        
