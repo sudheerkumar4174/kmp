@@ -1,0 +1,19 @@
+class Solution(object):
+    def minDeletionSize(self, strs):
+        l=len(strs)
+        m=len(strs[0])
+        d=0
+        c=0
+        for i in range(0,m):
+            si=""
+            q=""
+            for j in range(0,l):
+                si=si+strs[j][i]
+                f=sorted(si)
+            for i in f:
+                q=q+i
+            if q==si:
+                c=c+1
+            else:
+                d=d+1
+        return d
