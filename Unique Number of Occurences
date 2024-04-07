@@ -1,0 +1,21 @@
+class Solution(object):
+    def uniqueOccurrences(self, arr):
+        d={}
+        for  i in arr:
+            g=1
+            if d.get(i)==None:
+                d[i]=g
+            else:
+                h=d.get(i)
+                h=h+1
+                d[i]=h
+        l=[]
+        for i in arr:
+            g=d.get(i)
+            if g not in l:
+                l.append(d.get(i))
+        if len(l)!=len(d):
+            return False
+        else:
+            return True        
+        
