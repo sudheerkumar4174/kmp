@@ -1,0 +1,29 @@
+class Solution(object):
+    def applyOperations(self, nums):
+        c=0
+        l=[]
+        i=0
+        while i<(len(nums)-1):
+            if nums[i]==nums[i+1] and nums[i]!=0:
+                l.append(nums[i]*2)
+                c=c+1
+                i=i+2
+            elif nums[i]==0:
+                c=c+1
+                i=i+1
+            else:
+                l.append(nums[i])
+                i=i+1
+        h=nums[len(nums)-1]
+        k=0
+        if h==nums[len(nums)-2] and h!=0:
+            k=k+1
+        elif h==0:
+            c=c+1
+        else:
+            l.append(h)
+        for i in range(0,c):
+            l.append(0)
+        return l
+        
+        
