@@ -1,0 +1,16 @@
+class Solution(object):
+    def averageValue(self, nums):
+        l=[]
+        for i in nums:
+            if i%6==0:
+                l.append(i)
+        s=0
+        for i in l:
+            s=s+i
+        if len(l)==0:
+            return 0
+        else:
+            g=int(s/len(l))
+            return g
+         
+        
