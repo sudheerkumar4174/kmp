@@ -1,0 +1,16 @@
+class Solution(object):
+    def repeatedNTimes(self, nums):
+        d={}
+        for i in nums:
+            if d.get(i)==None:
+                g=1
+                d[i]=g
+            else:
+                h=d.get(i)
+                h=h+1
+                d[i]=h
+        j=max(d,key=lambda i:d[i])
+        return j
+
+
+        
