@@ -1,0 +1,32 @@
+class Solution(object):
+    def checkDistances(self, s, distance):
+        d={}
+        st={}
+        e={}
+        f={}
+        for i in range(len(s)):
+            if d.get(s[i])==None:
+                h=1
+                d[s[i]]=h
+                st[s[i]]=i
+            else:
+                h=d.get(s[i])
+                h=h+1
+                d[s[i]]=h
+                e[s[i]]=i
+        f={}
+        for i in range(97,123):
+            k=chr(i)
+            if k in s:
+                f[k]=e[k]-st[k]-1
+            else:
+                f[k]=0
+        for i in range(len(s)):
+            k=ord(s[i])-97
+            if f[s[i]]!=distance[k]:
+                return False
+        return True
+         
+
+     
+        
