@@ -1,0 +1,32 @@
+class Solution(object):
+    def mostFrequentEven(self, nums):
+        d={}
+        for i in nums:
+            if i%2==0:
+                if d.get(i)==None:
+                    d[i]=1
+                else:
+                    h=d.get(i)
+                    h=h+1
+                    d[i]=h
+        e=0
+        c=0
+        if len(d)==0:
+            return -1
+        for i,j in d.items():
+            if j>=c:
+                e=i
+                c=j
+        for i,j in d.items():
+            if j==c and i<e:
+                e=i
+        return e
+            
+            
+
+
+
+         
+
+         
+        
