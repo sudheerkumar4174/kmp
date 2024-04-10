@@ -1,0 +1,28 @@
+class Solution(object):
+    def isMonotonic(self, nums):
+        k=[]
+        for i in nums:
+            k.append(i)
+        k.sort()
+        c=0
+        d=0
+        for i in range(0,len(k)):
+            if nums[i]==k[i]:
+                c=c+1
+            else:
+                break
+        h=0
+        for i in range(len(k)-1,-1,-1):
+            if nums[i]==k[h]:
+                d=d+1
+                h=h+1
+            else:
+                break
+        if c==len(nums) or d==len(nums):
+            return True
+        else:
+            return False
+
+
+         
+        
