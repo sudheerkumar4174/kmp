@@ -1,0 +1,16 @@
+class Solution(object):
+    def maxScore(self, s):
+        x=0
+        y=0
+        r=0
+        for i in s:
+            if i=='1':
+                y=y+1
+        for i in range(len(s)-1):
+            if s[i]=='0':
+                x=x+1
+            else:
+                y=y-1
+            r=max(r,(x+y))
+        return r
+
