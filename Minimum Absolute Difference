@@ -1,0 +1,20 @@
+class Solution(object):
+    def minimumAbsDifference(self, arr):
+        arr.sort()
+        m=100000
+        l=[]
+        for i in range(0,len(arr)-1):
+            d=abs(arr[i+1]-arr[i])
+            if d<m:
+                m=d
+                t=i
+        l.append([arr[t],arr[t+1]])
+        for i in range(0,len(arr)-1):
+            d=abs(arr[i+1]-arr[i])
+            if d==m and i!=t:
+                l.append([arr[i],arr[i+1]])
+        return l
+
+
+         
+        
