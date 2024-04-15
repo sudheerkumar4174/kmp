@@ -1,0 +1,18 @@
+class Solution(object):
+    def getNoZeroIntegers(self, n):
+        l=[]
+        d=0
+        j=1
+        for i in range(1,1000):
+            x=n-j
+            y=n-x
+            a=str(x)
+            b=str(y)
+            if a.count('0')==0 and b.count('0')==0:
+                l.append(x)
+                l.append(y)
+                break
+            else:
+                j=j+1 
+        return l            
+        
