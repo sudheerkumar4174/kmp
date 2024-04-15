@@ -1,0 +1,28 @@
+class Solution(object):
+    def maxNumberOfBalloons(self, text):
+        l=[0]*26
+        for i in text:
+            d=ord(i)-97
+            l[d]=l[d]+1
+        count=0
+        if l[0]>0 and l[1]>0 and l[11]>0 and l[13]>0 and l[14]>0:
+            a=l[0]-1
+            b=l[1]-1
+            c=l[11]-2
+            d=l[13]-1
+            e=l[14]-2
+            while a>=0 and b>=0 and c>=0 and d>=0 and e>=0:
+                count=count+1
+                a=a-1
+                b=b-1
+                c=c-2
+                d=d-1
+                e=e-2
+            return count
+        else:
+            return count
+
+         
+
+        
+        
