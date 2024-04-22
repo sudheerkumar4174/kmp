@@ -1,0 +1,16 @@
+class Solution(object):
+    def findNumbers(self, nums):
+        d=0
+        for i in nums:
+            t=i
+            c=0
+            while t>0:
+                c=c+1
+                t=t/10
+            if c%2==0:
+                d=d+1
+        return d
+        
+
+
+        
