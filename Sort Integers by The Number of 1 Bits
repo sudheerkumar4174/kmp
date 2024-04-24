@@ -1,0 +1,26 @@
+class Solution(object):
+    def sortByBits(self, arr):
+        m=[]
+        n=[]
+        w=[]
+        for i in arr:
+            a=bin(i)[2:]
+            f=a.count('1')
+            if f not in m:
+                m.append(f)
+        m.sort()
+        if len(m)==1:
+            arr.sort()
+            return arr
+        else:
+            for i in m:
+                n=[]
+                for j in arr:
+                    g=bin(j)[2:]
+                    if g.count('1')==i:
+                        n.append(j)
+                n.sort()
+                for k in n:
+                    w.append(k)
+            return w
+        
