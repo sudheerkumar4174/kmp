@@ -1,0 +1,13 @@
+class Solution(object):
+    def findSpecialInteger(self, arr):
+         d={}
+         for i in arr:
+            if d.get(i)==None:
+                d[i]=1
+            else:
+                h=d.get(i)
+                h=h+1
+                d[i]=h
+         r=max(d, key= lambda x: d[x])
+         return r
+        
