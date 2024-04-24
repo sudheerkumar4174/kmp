@@ -1,0 +1,14 @@
+class Solution(object):
+    def subtractProductAndSum(self, n):
+        t=n
+        p=1
+        s=0
+        while t>0:
+            x=t%10
+            p=p*x
+            s=s+x
+            t=t/10
+        return p-s
+
+         
+        
