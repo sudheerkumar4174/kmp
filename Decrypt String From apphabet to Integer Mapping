@@ -1,0 +1,26 @@
+class Solution(object):
+    def freqAlphabets(self,s):
+        r=''
+        i=0
+        while i<len(s):
+            if s[i+2]!='#':
+                b=int(s[i])
+                c=chr(b+96)
+                r=r+c
+                i=i+1
+            else:
+                a=int(s[i])*10
+                b=int(s[i+1])
+                c=a+b
+                d=chr(c+96)
+                r=r+d
+                i=i+3
+            if i>=len(s)-2:
+                break
+        if i<len(s):
+            while i<len(s):
+                gh=int(s[i])
+                b=chr(gh+96)
+                r=r+b
+                i=i+1
+        return r
