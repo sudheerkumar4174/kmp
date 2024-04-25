@@ -1,0 +1,26 @@
+class Solution(object):
+    def sumZero(self, n):
+        l=[]
+        a=1
+        b=-1
+        if n%2==0:
+            for i in range(0,n/2):
+                l.append(a)
+                a=a+1
+                l.append(b)
+                b=b-1
+        else:
+            for i in range(0,n//2):
+                l.append(a)
+                a=a+1
+                l.append(b)
+                b=b-1
+            l.append(0)
+        return l
+
+
+
+
+
+         
+        
