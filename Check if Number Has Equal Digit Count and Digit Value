@@ -1,0 +1,26 @@
+class Solution(object):
+    def digitCount(self, num):
+        l=[]
+        for i in num:
+            h=int(i)
+            l.append(h)
+        d={}
+        for i in l:
+            if d.get(i)==None:
+                d[i]=1
+            else:
+                h=d.get(i)
+                h=h+1
+                d[i]=h
+        g=len(l)
+        for i in range(0,g):
+            if d.get(i)==None:
+                k=0
+                if k!=int(num[i]):
+                    return False
+            else:
+                k=d.get(i)
+                if k!=int(num[i]):
+                    return False
+        return True
+         
