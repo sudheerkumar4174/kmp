@@ -1,0 +1,26 @@
+class Solution(object):
+    def totalMoney(self, n):
+        s=0
+        x=n//7
+        y=1
+        z=y+7
+        g=n%7
+        for i in range(x):
+            for j in range(y,z,1):
+                s=s+j
+            y=y+1
+            z=y+7
+        if g!=0:
+            h=n%7
+            for i in range(h):
+                s=s+y
+                y=y+1
+        if n<7:
+            s=0
+            for i in range(1,n+1):
+                s=s+i
+        return s
+         
+             
+         
+        
