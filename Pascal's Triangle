@@ -1,0 +1,22 @@
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        l=[]
+        m=[1]
+        l.append(m)
+        if numRows==1:
+            return l
+        else:
+            t=[1,1]
+            t1=[1,1]
+            for i in range(2,numRows+1):
+                t=[]
+                t.append(1)
+                for j in range(0,i-2):
+                    s=t1[j]+t1[j+1]
+                    t.append(s)
+                t.append(1)
+                t1=t
+                l.append(t)
+            return l
+
+        
