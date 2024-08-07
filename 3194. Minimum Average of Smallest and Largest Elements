@@ -1,0 +1,16 @@
+class Solution(object):
+    def minimumAverage(self, nums):
+        k=[]
+        nums.sort()
+        while len(nums)>0:
+            s=sum(nums)
+            av=(nums[0]+nums[len(nums)-1])
+            k.append(av/2.0)
+            nums.pop()
+            nums.pop(0)
+        g=min(k)
+        return g
+
+
+         
+        
